@@ -13,20 +13,22 @@ export const Nav = () => {
               <a className="">Home</a>
             </Link>
           </li>
-          <li className="nav-item">
+          {/* Only logged */}
+          {/* <li className="nav-item">
             <Link href="">
               <a className="">
                 <i className="ion-compose"></i>&nbsp;New Article
               </a>
             </Link>
-          </li>
-          <li className="nav-item">
+          </li> */}
+          {/* Only logged */}
+          {/* <li className="nav-item">
             <Link href="">
               <a className="">
                 <i className="ion-gear-a"></i>&nbsp;Settings
               </a>
             </Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             <Link href="">
               <a className="">Sign in</a>
