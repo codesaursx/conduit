@@ -9,7 +9,7 @@ import configSchema from './schemas/config.schema';
     NestConfigModule.forRoot({
       isGlobal: true,
       load: [configValues],
-      validationSchema: [configSchema]
+      validationSchema: configSchema
     })
   ],
   exports: [NestConfigModule]
