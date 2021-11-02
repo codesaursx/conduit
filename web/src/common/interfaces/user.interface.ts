@@ -1,16 +1,14 @@
 import { IArticles } from './articles.interface'
 
-export interface IReduxUser {
-  isLoggedIn: boolean
-  data: IUser
-}
-
 export interface IUser {
-  id: string
+  id: number
   username: string
   email: string
   password: string
-  following: IUser[]
-  followers: IUser[]
-  articles: IArticles[]
+  profilePic: string
+  bio: string
+  following?: IUser[]
+  followers?: IUser[]
+  articles?: IArticles[]
+  favoriteArticles?: IArticles[]
 }
