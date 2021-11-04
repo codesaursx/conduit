@@ -1,4 +1,4 @@
-import { hasToken, isInPrivatePath, isInPublicPath } from '@Helpers/auth'
+import { hasToken, isInAuthPath, isInPrivatePath, isInPublicPath } from '@Helpers/auth'
 import { useRouter } from 'next/dist/client/router'
 import { useEffect, useState } from 'react'
 
@@ -11,17 +11,16 @@ export const useAuth = () => {
   const path = router.pathname
   const [isLoading, setIsLoading] = useState(true)
 
-  const redirectToSignIn = () => router.push('/signin')
   const redirectToHome = () => router.push('/')
 
   const handleAuth = async () => {
     if (!hasToken() && isInPrivatePath(path)) {
-      await redirectToSignIn()
+      await redirectToHome()
       setIsLoading(false)
       return
     }
 
-    if (hasToken() && isInPublicPath(path)) {
+    if (hasToken() && isInAuthPath(path)) {
       await redirectToHome()
       setIsLoading(false)
       return
