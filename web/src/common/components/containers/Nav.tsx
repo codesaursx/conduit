@@ -4,12 +4,12 @@ export const Nav = () => {
   return (
     <nav className="navbar navbar-light">
       <div className="container">
-        <Link href="index.html">
+        <Link href="/">
           <a className="">conduit</a>
         </Link>
         <ul className="nav navbar-nav pull-xs-right">
           <li className="nav-item">
-            <Link href="">
+            <Link href="/">
               <a className="">Home</a>
             </Link>
           </li>
@@ -30,12 +30,12 @@ export const Nav = () => {
             </Link>
           </li> */}
           <li className="nav-item">
-            <Link href="">
+            <Link href="/signin">
               <a className="">Sign in</a>
             </Link>
           </li>
           <li className="nav-item">
-            <Link href="">
+            <Link href="/signup">
               <a className="">Sign up</a>
             </Link>
           </li>

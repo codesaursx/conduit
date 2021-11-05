@@ -1,10 +1,8 @@
 import { FC } from 'react'
-import { useAuth } from '@Hooks/useAuth'
+import { useAuthorization } from '@Hooks/useAuthorization'
 
 export const AuthWrapper: FC = ({ children }) => {
-  const { isLoading } = useAuth()
-
-  if (isLoading) return <h1>loading...</h1>
+  useAuthorization()
 
   return <>{children}</>
 }
