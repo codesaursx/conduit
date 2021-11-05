@@ -12,3 +12,5 @@ export interface IUser {
   articles?: IArticles[]
   favoriteArticles?: IArticles[]
 }
+
+export type TSignInUser = Pick<IUser, 'email' | 'password'>
