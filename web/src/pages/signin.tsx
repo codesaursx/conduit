@@ -1,5 +1,7 @@
+import { SignInView } from '@Modules/Signin/SignInView'
+
 const SignInPage = () => {
-  return <h1>hi</h1>
+  return <SignInView />
 }
 
 export default SignInPage
