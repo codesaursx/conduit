@@ -1,5 +1,5 @@
 import { TInputType } from '@Interfaces/utils.interface'
-import { ChangeEvent, Dispatch, SetStateAction, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 
 const OPTIONAL_PLACEHOLDERS = {
   ['password']: 'Password',

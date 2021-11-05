@@ -1,4 +1,7 @@
-export const Input = ({ type, placeholder, value, onChange }) => {
+import { TInputType } from '@Interfaces/utils.interface'
+import { FC } from 'react'
+
+export const Input: FC<Props> = ({ type, placeholder, value, onChange }) => {
   return (
     <fieldset className="form-group">
       <input
@@ -10,4 +13,11 @@ export const Input = ({ type, placeholder, value, onChange }) => {
       />
     </fieldset>
   )
+}
+
+type Props = {
+  type: TInputType
+  placeholder: string
+  value: string
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
